@@ -125,7 +125,7 @@ class ModelTrainer:
 
             best_params = params[actual_model]
 
-            mlflow.set_registry_uri("https:")
+            mlflow.set_registry_uri("https://dagshub.com/parvej-sk/GEMSTONE_mlproject.mlflow")
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
 
