@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/0Industry_Project_Architecture/K00-Gemstone-data-mlflow/mlruns/0/fa2680ce8c144c5fab11cf36e96ad93f/artifacts
+end_time: 1699506229934
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fa2680ce8c144c5fab11cf36e96ad93f
+run_name: fun-goat-365
+run_uuid: fa2680ce8c144c5fab11cf36e96ad93f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699506176084
+status: 3
+tags: []
+user_id: root

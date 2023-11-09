@@ -30,8 +30,8 @@ def read_sql_data():
         )
         logging.info("Connection Established",mydb)
 
-        #df=pd.read_sql_query('select * from ml.gemstone where price > 3000',
-        #                     mydb)
+        df=pd.read_sql_query('select * from ml.gemstone where price > 3000',
+                             mydb)
 
 
         df=pd.read_sql_query('select * from ml.gemstone where price between 4000 and 13000' ,

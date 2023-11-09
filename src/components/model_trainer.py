@@ -128,9 +128,7 @@ class ModelTrainer:
             mlflow.set_registry_uri("https://dagshub.com/parvej-sk/GEMSTONE_mlproject.mlflow")
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
-
             # mlflow
-
             with mlflow.start_run():
 
                 predicted_qualities = best_model.predict(X_test)
@@ -143,7 +141,6 @@ class ModelTrainer:
                 mlflow.log_metric("r2", r2)
                 mlflow.log_metric("mae", mae)
 
-
                 # Model registry does not work with file store
                 if tracking_url_type_store != "file":
 
@@ -155,10 +152,6 @@ class ModelTrainer:
                 else:
                     mlflow.sklearn.log_model(best_model, "model")
 
-
-
-            
-            
             save_object(
                  file_path=self.model_trainer_config.trained_model_file_path,
                  obj=best_model

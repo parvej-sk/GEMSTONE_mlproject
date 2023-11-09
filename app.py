@@ -1,9 +1,15 @@
 from flask import Flask,request,render_template
 import numpy as np
 import pandas as pd
+
+from src.logger import logging
+from src.exception import CustomException
+import sys
+
 #from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
+from src.pipeline.training_pipeline import TrainingPipeline
 
 application=Flask(__name__)
 
@@ -14,6 +20,18 @@ app=application
 @app.route('/')
 def index():
     return render_template('index.html') 
+
+
+@app.route("/train")
+def train_route():
+    try:
+        train_pipeline = TrainingPipeline()
+        train_pipeline.run_pipeline()
+
+        return "Training Complete"
+
+    except CustomException as e:
+        return str(e)
 
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
