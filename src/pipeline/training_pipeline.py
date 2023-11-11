@@ -20,6 +20,7 @@ if __name__=="__main__":
         train_arr,test_arr,_=data_transformation.initaite_data_transformation(train_data_path, test_data_path) 
 
         # Model Training
+        #Model Training
         model_trainer = ModelTrainer()
         print(model_trainer.initate_model_training(train_arr,test_arr))
         
