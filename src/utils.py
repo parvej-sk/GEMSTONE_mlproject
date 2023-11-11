@@ -34,7 +34,7 @@ def read_sql_data():
                              mydb)
 
 
-        df=pd.read_sql_query('select * from ml.gemstone where price between 4000 and 13000' ,
+        df=pd.read_sql_query('select * from ml.gemstone where price between 4000 and 8000' ,
                             mydb)
         #df=pd.read_sql_query('select * from ml.gemstone',mydb)
         print(df.head())

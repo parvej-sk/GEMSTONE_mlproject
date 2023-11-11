@@ -133,6 +133,8 @@ venv.bak/
 gem
 artifacts
 logs
+mlruns
+
 
 
 
